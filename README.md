@@ -12,7 +12,7 @@ O objetivo é reconhecer tokens válidos de uma linguagem fictícia semelhante a
 
 ## Funcionamento
 
-1. O analisador lê o arquivo-fonte (ex: `Teste2.txt`).
+1. O analisador lê o arquivo-fonte (ex: `Teste1.txt`).
 2. O Lexer percorre o arquivo caractere por caractere.
 3. Cada palavra, número ou símbolo é transformado em um Token.
 4. Ao final, são exibidos:
