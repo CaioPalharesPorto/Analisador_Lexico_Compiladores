@@ -1,0 +1,29 @@
+//teste criado pelo grupo
+
+app medidas
+
+  real a, b, media, proporcao, negativo;
+
+{
+  print("Digite dois numeros reais: ");
+  scan(a); scan(b);
+
+  // médias e operações com floats (inclui literal com ponto)
+  media = (a + b) / 2.0;
+  proporcao = a / (b + 0.1);
+
+  // teste com float negativo (lexer deve aceitar '-')
+  negativo = -3.75;
+
+  // ajustes com multiplicação e divisão por floats
+  a = a * 0.5;
+  b = b / 10.0;
+
+  // comparações envolvendo floats
+  if (media >= 0.0 && proporcao < 100.0) {
+    print("Resultados:");
+    print(media);
+    print(proporcao);
+    print(negativo);
+  }
+}
