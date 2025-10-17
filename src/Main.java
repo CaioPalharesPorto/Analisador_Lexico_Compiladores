@@ -34,12 +34,12 @@ public class Main {
             System.out.println("\nTABELA DE SÍMBOLOS:");
             System.out.println("\nPalavras-reservadas:\n");
             for (Word w : reservadas) {
-                System.out.println("  " + w); // KW(nome)
+                System.out.println("  " + w);
             }
 
             System.out.println("\nIdentificadores:\n");
             for (Word w : identificadores) {
-                System.out.println("  " + w); // ID(nome)
+                System.out.println("  " + w);
             }
         }
     }
