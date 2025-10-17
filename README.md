@@ -1,18 +1,59 @@
-## Getting Started
+# Analisador Léxico — Trabalho de Compiladores
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto implementa um Analisador Léxico em Java, desenvolvido como parte da disciplina de Compiladores.  
+O objetivo é reconhecer tokens válidos de uma linguagem fictícia semelhante a C, identificando palavras reservadas, identificadores, números inteiros e reais, strings, caracteres, operadores e pontuações.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## Estrutura do Projeto
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Funcionamento
 
-## Dependency Management
+1. O analisador lê o arquivo-fonte (ex: `Teste2.txt`).
+2. O Lexer percorre o arquivo caractere por caractere.
+3. Cada palavra, número ou símbolo é transformado em um Token.
+4. Ao final, são exibidos:
+   - A sequência de tokens reconhecidos;
+   - A Tabela de Símbolos, contendo:
+     - Palavras reservadas
+     - Identificadores instalados
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## Exemplo de Execução
+
+### Código de entrada (`Teste7.txt`)
+```java
+app medidas
+
+  real a, b, media, proporcao, negativo;
+
+{
+  print("Digite dois numeros reais: ");
+  scan(a); scan(b);
+
+  media = (a + b) / 2.0;
+  proporcao = a / (b + 0.1);
+  negativo = -3.75;
+}
+
+TOKENS:
+app medidas real a , b , media , proporcao , negativo ; { print ( "Digite dois numeros reais: " ) ; scan ( a ) ; scan ( b ) ; media = ( a + b ) / 2.0 ; proporcao = a / ( b + 0.1 ) ; negativo = -3.75 ; }
+
+TABELA DE SÍMBOLOS
+Palavras-reservadas:
+  app
+  real
+  print
+  scan
+
+Identificadores:
+  medidas
+  a
+  b
+  media
+  proporcao
+  negativo
